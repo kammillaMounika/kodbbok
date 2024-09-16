@@ -19,5 +19,21 @@ public class PostServiceImplementation implements PostService {
 		
 	}
 
+
+
+	@Override
+	public List<Post> fetchAllPosts() {
+	
+		return repo.findAll();
+	}
+
+
+
+	@Override
+	public List<Post> getAllPosts() {
+		
+		return repo.findAll();
+	}
+
 	
 }
