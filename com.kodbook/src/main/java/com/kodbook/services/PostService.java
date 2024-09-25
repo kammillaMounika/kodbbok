@@ -12,6 +12,12 @@ public interface PostService {
 
 	List<Post> fetchAllPosts();
 
+	Post getPost(Long id);
+
+	void upadtePost(Post post);
+
+
+
 	
 
 }

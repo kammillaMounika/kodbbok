@@ -2,10 +2,11 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Posts</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}">
 </head>
 <body>
     <h1>Post Details</h1>
-    <div>
+    <div class="profile-details">
      <span th:each="post:${allPosts}">
      
         <p><strong>Photo:</strong></p>
@@ -27,8 +28,9 @@
         </form>
         
         <form action="/addComment" method="post">
-	        <textarea name="comments"></textarea>
-	        <input type="submit">
+        <input name="id" th:value="${post.id}">
+	     <textarea name="comments"></textarea>
+	        <input type="submit" value="Comment">
         </form>
         <hr />
      
